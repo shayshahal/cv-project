@@ -7,7 +7,7 @@ class Personal extends Component{
         this.state = {
             Name: 'Shay',
             Email: 'shay840@gmail.com',
-            Phone: '054-2594831',
+            Phone: '054-1234567',
             editing: ''
         }
         this.toggleInputField = this.toggleInputField.bind(this);
