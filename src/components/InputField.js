@@ -1,8 +1,7 @@
 /* eslint-disable no-useless-constructor */
 import React, { Component } from "react";
-import uniqid from 'uniqid';
 import '../styles/InputField.css'
-
+import uniqid from 'uniqid';
 
 class InputField extends Component{
     constructor(props){
@@ -18,12 +17,12 @@ class InputField extends Component{
         this.props.onChange(e.target.id, e.target.value)
     }
     render(){
-        return (<form className={this.props.show} onSubmit={this.handleSubmit}>
+        return (<form>
             {
-                this.props.fields.map((f)=>{
-                    return (<label key={uniqid()} htmlFor={f.name}>
+                this.props.fields.map((f, i)=>{
+                    return (<label key={i} htmlFor={f.name}>
                         {f.name + ' '}
-                        <input key={uniqid()} id={f.name} type={f.type} value={f.value} onChange={this.handleChange}/>
+                        <input id={f.name} type={f.type} value={f.value} onChange={this.handleChange}/>
                     </label>);
                 })
             }
