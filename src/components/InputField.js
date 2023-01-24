@@ -17,7 +17,7 @@ class InputField extends Component{
         this.props.onChange(e.target.id, e.target.value)
     }
     render(){
-        return (<form>
+        return (<form onSubmit={this.handleSubmit}>
             {
                 this.props.fields.map((f, i)=>{
                     return (<label key={i} htmlFor={f.name}>
