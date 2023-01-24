@@ -1,7 +1,7 @@
 import React, {Component} from "react";
 import InputField from "./InputField";
 import uniqid from 'uniqid';
-
+import '../styles/Section.css'
 class Section extends Component{
     constructor(props){
         super(props);
@@ -13,6 +13,7 @@ class Section extends Component{
         this.changeValues = this.changeValues.bind(this)
     }
     toggleInputField(str){
+        
         this.setState({editing: str})
     }
     changeValues(name, value){
@@ -23,7 +24,7 @@ class Section extends Component{
         })})
     }
     render(){
-        return (<div className={this.props.title}>
+        return (<div className={this.props.title + ' section'}>
             <h1>{this.props.title}</h1>
             {this.state.fields.map((f)=>{
                 return (<div key={uniqid()} className={f.name}>

@@ -19,7 +19,7 @@ class InputField extends Component{
                     return <Input key={i} type={f.type} name={f.name} value={f.value} onChange={this.props.onChange}/>
                 })
             }
-            <button>Submit</button>
+            <button className="outBtn"></button>
         </form>);
     };
 }

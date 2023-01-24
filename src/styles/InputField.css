@@ -1,6 +1,28 @@
 .editing{
-    display: block;
+    display: flex;
 }
+
 form{
     display: none;
+    position: fixed;
+    align-items: center;
+    justify-content: space-evenly;
+    top: 0;
+    bottom: 90%;
+    left: 0;
+    right: 0;
+    z-index: 999;
+    background-color: rgb(36, 36, 133);
+}
+.outBtn{
+    position: fixed;
+    z-index: 99;
+    bottom: 0;
+    top: 10%;
+    left: 0;
+    right: 0;
+    background-color: transparent;
+    border: none;
+    user-select: none;
+    outline: none;
 }
