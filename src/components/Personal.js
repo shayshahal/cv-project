@@ -1,50 +1,15 @@
 import React, { Component} from "react";
-import InputField from "./InputField";
+import Section from "./Section";
 
 class Personal extends Component{
-    constructor(props){
-        super(props);
-        this.state = {
-            Name: 'Shay',
-            Email: 'shay840@gmail.com',
-            Phone: '054-1234567',
-            editing: ''
-        }
-        this.toggleInputField = this.toggleInputField.bind(this);
-        this.changeValues = this.changeValues.bind(this)
-    }
-    toggleInputField(str){
-        this.setState({editing: str})
-    }
-    changeValues(name, value){
-        this.setState({[name]: value})
-    }
     render(){
-        const {Name, Email, Phone, editing} = this.state;
-        return (<div>
-            <h1 className="Name">Hi, my name is {Name}.</h1>
-            <div>
-                <span>@ {Email}</span>
-                <span>📞 {Phone}</span>
-            </div>
-            <InputField show={editing} onChange={this.changeValues} onSubmit={this.toggleInputField} fields={[{
-                    name: 'Name', 
-                    type: 'text',
-                    value: Name
-                },{
-                    name: 'Email',
-                    type: 'email',
-                    value: Email
-                },{
-                    name: 'Phone-Number',
-                    type: 'tel',
-                    value: Phone
-                }
-                ]}
-            />
-
-            <button onClick={()=>{this.toggleInputField('editing')}}>Edit</button>
-        </div>);
+        return (<Section title='Personal' fields={[
+                {name: 'Name', type: 'text', value: 'Shay'},
+                {name: 'Email',type: 'email', value: 'shay840@gmail.com'},
+                {name: 'Phone',type: 'tel', value: '054-1234567'}
+            ]
+        }/>
+);
     }
 }
 
