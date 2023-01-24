@@ -20,14 +20,14 @@ class Personal extends Component{
         this.setState({[name]: value})
     }
     render(){
-        const {Name, Email, Phone,} = this.state;
+        const {Name, Email, Phone, editing} = this.state;
         return (<div>
             <h1 className="Name">Hi, my name is {Name}.</h1>
             <div>
                 <span>@ {Email}</span>
                 <span>📞 {Phone}</span>
             </div>
-            <InputField onChange={this.changeValues} onSubmit={this.toggleInputField} fields={[{
+            <InputField show={editing} onChange={this.changeValues} onSubmit={this.toggleInputField} fields={[{
                     name: 'Name', 
                     type: 'text',
                     value: Name
