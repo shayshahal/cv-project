@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import Section from "./Section";
+import '../styles/Practical.css'
 class Practical extends Component{
     render(){
         return (<Section title='Practical Experience' fields={[
