@@ -1,0 +1,11 @@
+.App{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: .25fr 1fr;
+    min-height: 100vh;
+    padding: 1em;
+    gap: 1em;
+    align-items: stretch;
+    background-color: var(--background);
+    color: var(--fontColor);
+}

@@ -1,0 +1,26 @@
+.section{
+    position: relative;
+    font-size: 2rem;
+    border-radius: .75rem;
+}
+.section h1{
+    background-color: var(--header);
+    font-size: 4rem;
+    padding: .5em;
+    border-top-right-radius: 100%;
+}
+.editBtn{
+    position: absolute;
+    top: .25rem;
+    right: .25rem;
+    font-size: 2rem;
+    border-radius: .5rem;
+    background-color: transparent;
+}
+.section div{
+    background-color: var(--contentBG);
+    padding: 1em;
+    display: flex;
+    flex-direction: column;
+    
+}

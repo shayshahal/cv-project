@@ -1,0 +1,5 @@
+input{
+    background-color: var(--background);
+    padding: 1rem;
+    border-radius: 3rem;
+}
