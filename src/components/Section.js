@@ -13,7 +13,6 @@ class Section extends Component{
         this.changeValues = this.changeValues.bind(this)
     }
     toggleInputField(str){
-        
         this.setState({editing: str})
     }
     changeValues(name, value){
@@ -26,13 +25,15 @@ class Section extends Component{
     render(){
         return (<div className={this.props.title + ' section'}>
             <h1>{this.props.title}</h1>
-            {this.state.fields.map((f)=>{
-                return (<div key={uniqid()} className={f.name}>
-                    {f.name}: {f.value}
-                </div>)
-            })}
+            <div className='content'>
+                {this.state.fields.map((f)=>{
+                    return (<li key={uniqid()} className={f.name}>
+                        {f.name}: {f.value}
+                    </li>)
+                })}
+            </div>
             <InputField show={this.state.editing} onChange={this.changeValues} fields={this.state.fields} onSubmit={this.toggleInputField}/>
-            <button onClick={()=>{this.toggleInputField('editing')}}>Edit</button>
+            <button className='editBtn' onClick={()=>{this.toggleInputField('editing')}}>✎</button>
         </div>);
     }
 }
