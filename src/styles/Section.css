@@ -1,26 +1,37 @@
 .section{
     position: relative;
     font-size: 2rem;
-    border-radius: .75rem;
+    background-color: var(--background);
 }
 .section h1{
-    background-color: var(--header);
     font-size: 4rem;
-    padding: .5em;
-    border-top-right-radius: 100%;
+    font-weight: 900;
+    padding: 0em .5em;
+    border-bottom: .1rem solid;
+    text-align: start;
 }
 .editBtn{
     position: absolute;
-    top: .25rem;
-    right: .25rem;
-    font-size: 2rem;
-    border-radius: .5rem;
+    top: 0rem;
+    left: 0rem;
+    font-size: 1.5rem;
+    color: transparent;
     background-color: transparent;
 }
-.section div{
-    background-color: var(--contentBG);
+.delBtn{
+    position: absolute;
+    top: .2rem;
+    right: .2rem;
+    font-size: 2rem;
+    color: transparent;
+    background-color: transparent;
+}
+.section:hover .delBtn,.section:hover .editBtn{
+    color: inherit;
+}
+.content{
     padding: 1em;
-    display: flex;
-    flex-direction: column;
-    
+    display: grid;
+    font-weight: 600;
+    grid-template-columns: 1fr 1fr;
 }

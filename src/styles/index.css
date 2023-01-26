@@ -1,14 +1,21 @@
 *{
     margin: 0;
+    padding: 0;
     box-sizing: border-box;
-    --background: rgb(2, 37, 90);
-    --fontColor: rgb(255, 255, 255);
-    --header: rgb(3, 78, 139);
-    --contentBG: rgb(0, 122, 223);
+}
+:root{
+    --background: rgb(255, 255, 255);
+    --fontColor: rgb(0, 0, 0);
 }
 html{
     font-size: 62.5%;
+    font-family: Calibri;
 } 
+@media screen and (max-width: 720px) {
+    html{
+        font-size: 30%;
+    }
+}
 button, input{
     border: none;
     user-select: none;

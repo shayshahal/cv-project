@@ -1,26 +1,37 @@
 .editing{
-    display: flex;
+    display: grid;
+    animation: .2s ease slideIn;
 }
-
+@keyframes slideIn {
+    0%{
+        transform: rotateX(-90deg);
+    }
+    100%{
+        transform: rotateX(0deg);
+    }
+    
+    
+}
 form{
     display: none;
     position: fixed;
     align-items: center;
-    justify-content: space-evenly;
+    transform-origin: top center;
+    grid-template-columns: 1fr 1fr;
     top: 0;
     bottom: 80%;
     left: 0;
     right: 0;
+    padding: 1em;
     z-index: 999;
-    background-color: var(--header);
+    background-color: rgb(36, 35, 35);
     box-shadow: 0rem .5rem .5rem rgb(36, 35, 35);
 }
 .outBtn{
     position: fixed;
     z-index: 99;
+    background-color: transparent;
     bottom: 0;
-    opacity: .3;
-    background-color: black;
     top: 20%;
     left: 0;
     right: 0;

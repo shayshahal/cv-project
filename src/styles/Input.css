@@ -3,3 +3,6 @@ input{
     padding: 1rem;
     border-radius: 3rem;
 }
+label{
+    font-weight: 600;
+}
