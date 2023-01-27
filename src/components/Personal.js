@@ -3,10 +3,13 @@ import Section from "./Section";
 import '../styles/Personal.css'
 class Personal extends Component{
     render(){
-        return (<Section title='Personal' fields={[
-                {name: 'Name', type: 'text', value: 'Shay'},
-                {name: 'Email',type: 'email', value: 'shay840@gmail.com'},
-                {name: 'Phone',type: 'tel', value: '054-1234567'}
+        return (<Section ind={-1} class='Personal' fields={[
+                {name: 'Full Name', type: 'text', value: 'Full Name'},
+                {name: 'Age', type: 'number', value:''},
+                {name: 'Email',type: 'email', value: ''},
+                {name: 'Phone',type: 'tel', value: ''},
+                {name: 'Address',type: 'text', value: ''},
+                {name: 'About Me',type: 'text', value: ''},
             ]
         }/>
 );
