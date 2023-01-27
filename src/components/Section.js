@@ -11,6 +11,7 @@ class Section extends Component{
         }
         this.toggleInputField = this.toggleInputField.bind(this);
         this.changeValues = this.changeValues.bind(this)
+        this.deleteSelf = this.deleteSelf.bind(this);
     }
     toggleInputField(str){
         this.setState({editing: str})
@@ -22,18 +23,24 @@ class Section extends Component{
             return f;
         })})
     }
+    deleteSelf(){
+        this.props.onDelete(this.props.ind);
+    }
     render(){
-        return (<div className={this.props.title + ' section'}>
-            <h1>{this.props.title}</h1>
+        const {fields, editing} = this.state;
+        return (<div className={this.props.class + ' section'}>
+            <h1 className={this.props.class+'Title'}>{fields[0].value}</h1>
             <div className='content'>
-                {this.state.fields.map((f)=>{
-                    return (<li key={uniqid()} className={f.name}>
+                {fields.slice(1).map((f)=>{
+                    return (<span key={uniqid()} className={f.name}>
                         {f.name}: {f.value}
-                    </li>)
+                    </span>)
                 })}
             </div>
-            <InputField show={this.state.editing} onChange={this.changeValues} fields={this.state.fields} onSubmit={this.toggleInputField}/>
+            <InputField show={editing} onChange={this.changeValues} fields={fields} onSubmit={this.toggleInputField}/>
             <button className='editBtn' onClick={()=>{this.toggleInputField('editing')}}>✎</button>
+            {this.props.ind !== -1 && <button className='delBtn' onClick={this.deleteSelf}>✖️</button>}
+            
         </div>);
     }
 }
