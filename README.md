@@ -2,7 +2,7 @@
 
 CV-Application project following The Object Odin curriculum.
 
-[Live Demo]("https://shayshahal.github.io/cv-project/")
+[Live Demo](https://shayshahal.github.io/cv-project/)
 
 ## What I Learned
 - React Components basics
