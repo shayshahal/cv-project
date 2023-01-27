@@ -1,11 +1,11 @@
 .App{
-    min-height: 100vh;
-    padding: 2em;
+    background-color: var(--background);
+    border: .5rem solid black;
+    border-radius: .5rem;
+    color: var(--fontColor);
+    aspect-ratio: 1/1.2;
 }
-.appTitle{
-    font-size: 6rem;
-    text-align: center;
-}
+
 .sectionList{
     position: relative;
     display: grid;
@@ -17,7 +17,7 @@
     font-size: 5rem;
     padding: 0em .5em;
     grid-column: 1/span 2;
-    border-bottom: .5rem solid;
+    border-bottom: .2rem solid black;
 }
 .sectionList div{
     padding: 1em;

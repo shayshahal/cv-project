@@ -30,7 +30,6 @@ class App extends Component{
   render(){
     return (
       <div className="App">
-        <h1 className='appTitle'>CV Maker</h1>
         <Personal/>
         <div className='sectionList'>
           <h1 className='EducationTitle'>My Education</h1>

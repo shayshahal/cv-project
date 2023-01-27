@@ -2,6 +2,7 @@ input{
     background-color: var(--background);
     padding: 1rem;
     border-radius: 3rem;
+    display: block;
 }
 label{
     font-weight: 600;
