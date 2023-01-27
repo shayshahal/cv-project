@@ -24,7 +24,7 @@ class Section extends Component{
         })})
     }
     deleteSelf(){
-        this.props.onDelete(this.props.ind);
+        this.props.onDelete();
     }
     render(){
         const {fields, editing} = this.state;

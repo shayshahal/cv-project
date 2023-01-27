@@ -21,9 +21,10 @@ class App extends Component{
       : this.setState({educations: [...this.state.educations,comp]})
   }
   removeComp(ind, type){
+    console.log(ind)
     type === Practical
-      ? this.setState({jobs: this.state.jobs.filter((j, i)=> i !== ind)})
-      : this.setState({educations: this.state.educations.filter((e, i)=> i !== ind)})
+      ? this.setState({jobs: this.state.jobs.filter((j, i)=> j.props.ind !== ind)})
+      : this.setState({educations: this.state.educations.filter(e=> e.props.ind !== ind)})
   }
 
   render(){
