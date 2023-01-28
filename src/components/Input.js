@@ -1,18 +1,11 @@
-import React, { Component } from "react";
+import React from "react";
 import '../styles/Input.css'
 
-class Input extends Component{
-    constructor(props){
-        super(props);
-        this.handleChange = this.handleChange.bind(this)
-    }
-    handleChange(e){
+const Input = ({name, type, value}) => {
+    function handleChange(e){
         this.props.onChange(e.target.name, e.target.value)
     }
-    render(){
-        const {name, type, value} = this.props;
-        return (<label htmlFor={name}>{name + ': '}<input type={type} name={name} value={value} onChange={this.handleChange}/></label>);
-    };
+    return (<label htmlFor={name}>{name + ': '}<input type={type} name={name} value={value} onChange={handleChange}/></label>);
 }
 
 export default Input;
