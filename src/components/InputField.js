@@ -3,7 +3,7 @@ import React from "react";
 import '../styles/InputField.css'
 import Input from "./Input";
 
-const InputField = ({fields, show, onChange, onSubmit}) => {
+export default function InputField({fields, show, onChange, onSubmit}){
     function handleSubmit(e){
         e.preventDefault();
         onSubmit();
@@ -17,5 +17,3 @@ const InputField = ({fields, show, onChange, onSubmit}) => {
         <button className="outBtn"></button>
     </form>);
 }
-
-export default InputField;
